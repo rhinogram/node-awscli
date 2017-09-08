@@ -1,7 +1,7 @@
 {
   "name": "node-awscli",
   "version": "1.0.0",
-  "description": "Public docker image with Node 6.11.2, docker-ce, and AWS CLI",
+  "description": "Public docker image with Node 6.11.2, docker-ce, and AWS CLI for CircleCi workspaces",
   "scripts": {
     "build": "docker build -t rhinogram/node-awscli ."
   },
