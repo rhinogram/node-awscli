@@ -5,5 +5,5 @@ sudo apt-get update && sudo apt-get install -qq -y python-pip libpython-dev
 curl -O https://bootstrap.pypa.io/get-pip.py && python get-pip.py
 sudo pip install -q awscli --upgrade
 
-echo 'installing global npm packages...'
-sudo npm install -g aws-sdk colors
+# echo 'installing global npm packages...'
+# sudo npm install -g aws-sdk colors
