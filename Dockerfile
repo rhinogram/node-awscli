@@ -4,6 +4,7 @@ LABEL description="Basic Docker image with Node and AWS CLI for CircleCi workspa
 
 ADD dependencies.sh ~/
 WORKDIR ~
+RUN sudo apt-get install apt-utils
 RUN sudo chmod +x ./dependencies.sh
 RUN ./dependencies.sh
 
