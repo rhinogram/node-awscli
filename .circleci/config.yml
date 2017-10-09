@@ -16,7 +16,7 @@ jobs:
           command: yarn build
       - run:
           name: Login to Dockerhub
-          command: docker login -u $USERNAME --password-stdin $PASSWORD
+          command: docker login -u $USERNAME -p $PASSWORD
       - run:
           name: Update Docker Image
           command: docker push rhinogram/node-awscli
