@@ -1,0 +1,33 @@
+defaults: &defaults
+  working_directory: ~/node-awscli
+  docker:
+    - image: circleci/node:6.11.2
+
+version: 2
+jobs:
+
+  build_and_update:
+    <<: *defaults
+    steps:
+      - checkout
+      - setup_remote_docker
+      - run:
+          name: Build Image
+          command: yarn build
+      - run:
+          name: Login to Dockerhub
+          command: docker login -u $USERNAME --password-stdin $PASSWORD
+      - run:
+          name: Update Docker Image
+          command: docker push rhinogram/node-awscli
+
+workflows:
+  version: 2
+
+  master:
+    jobs:
+      - build_and_update:
+          filters:
+            branches:
+              only:
+                - master
