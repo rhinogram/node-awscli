@@ -1,0 +1,11 @@
+# for development/testing
+version: '2'
+services:
+
+  circle:
+    container_name: circle
+    build:
+      context: .
+    volumes:
+      - .:/dir
+    command: node test.js
