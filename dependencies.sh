@@ -9,9 +9,7 @@ sudo pip install -q awscli --upgrade
 sudo curl -o /usr/local/bin/ecs-cli https://s3.amazonaws.com/amazon-ecs-cli/ecs-cli-linux-amd64-latest
 sudo chmod +x /usr/local/bin/ecs-cli
 
-# ecs-deploy
-sudo pip install ecs-deploy -y
-
 # global npm
 sudo npm install -g merge-yaml-cli
 sudo npm install -g aws-sdk
+sudo npm install -g jq-cli-wrapper
