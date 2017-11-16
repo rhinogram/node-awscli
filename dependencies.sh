@@ -4,7 +4,7 @@ echo "installing dependencies..."
 sudo apt-get update 
 sudo apt-get install -qq -y python-pip libpython-dev
 sudo curl -O https://bootstrap.pypa.io/get-pip.py && sudo python get-pip.py
-sudo pip install -q awscli --upgrade
+sudo pip install -q awscli==1.11.115 --upgrade # lock version
 
 # jq json parser
 sudo apt-get install jq
