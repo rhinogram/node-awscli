@@ -19,4 +19,4 @@ sudo npm install -g aws-sdk
 sudo npm install -g babel-cli
 
 # update docker cash
-docker pull node:8.9
+# docker pull node:8.9
