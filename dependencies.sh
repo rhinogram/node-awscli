@@ -14,10 +14,8 @@ sudo curl -o /usr/local/bin/ecs-cli https://s3.amazonaws.com/amazon-ecs-cli/ecs-
 sudo chmod +x /usr/local/bin/ecs-cli
 
 # global npm
+sudo npm install -g yarn@1.7.0
 sudo npm install -g merge-yaml-cli
 sudo npm install -g aws-sdk
 sudo npm install -g babel-cli
 sudo npm install -g api-console-cli
-
-# update docker cash
-# docker pull node:8.9
