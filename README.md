@@ -4,4 +4,4 @@ to begin using the aws cli.
 
 Dockerhub repo: https://hub.docker.com/r/rhinogram/node-awscli/
 
-This image is designed for use with CircleCi 2.0 and is built off of the base circleci/node:8.9 image.
+This image is designed for use with CircleCi 2.0 and is built off of the base circleci/node image.
