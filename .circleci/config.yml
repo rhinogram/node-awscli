@@ -13,13 +13,19 @@ jobs:
       - setup_remote_docker
       - run:
           name: Build Image
-          command: yarn build
+          command: docker build -t rhinogram/node-awscli:$CIRCLE_BRANCH .
       - run:
           name: Login to Dockerhub
           command: docker login -u $USERNAME -p $PASSWORD
       - run:
           name: Update Docker Image
-          command: docker push rhinogram/node-awscli
+          command: |
+            if [ "$CIRCLE_BRANCH" == "master" ]; then
+              docker tag rhinogram/node-awscli:$CIRCLE_BRANCH rhinogram/node-awscli:latest
+              docker push rhinogram/node-awscli:latest
+            else
+              docker push rhinogram/node-awscli:$CIRCLE_BRANCH
+            fi
 
 workflows:
   version: 2
@@ -31,3 +37,4 @@ workflows:
             branches:
               only:
                 - master
+                - '8.9'
