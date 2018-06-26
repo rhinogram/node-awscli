@@ -30,7 +30,7 @@ jobs:
 workflows:
   version: 2
 
-  master:
+  updateDockerhub:
     jobs:
       - build_and_update:
           filters:
