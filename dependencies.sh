@@ -24,5 +24,5 @@ sudo npm install -g babel-cli
 sudo npm install -g api-console-cli
 
 # modify executable permissions
-chmod a+rwx  /usr/local/lib/node_modules/yarn/bin/yarn*
-chmod a+rwx  /usr/local/bin/yarn*
+sudo chmod a+rwx  /usr/local/lib/node_modules/yarn/bin/yarn*
+sudo chmod a+rwx  /usr/local/bin/yarn*
