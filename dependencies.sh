@@ -23,5 +23,6 @@ sudo npm install -g aws-sdk
 sudo npm install -g babel-cli
 sudo npm install -g api-console-cli
 
-# upgrade yarn
-# sudo curl --compressed -o- -L https://yarnpkg.com/install.sh | bash
+# modify executable permissions
+chmod a+rwx  /usr/local/lib/node_modules/yarn/bin/yarn*
+chmod a+rwx  /usr/local/bin/yarn*
