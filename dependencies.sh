@@ -2,6 +2,8 @@
 
 echo "installing dependencies..."
 sudo apt-get update 
+
+# python and awscli
 sudo apt-get install -qq -y python-pip libpython-dev
 sudo curl -O https://bootstrap.pypa.io/get-pip.py && sudo python get-pip.py
 sudo pip install -q awscli==1.11.115 --upgrade # lock version
@@ -14,8 +16,11 @@ sudo curl -o /usr/local/bin/ecs-cli https://s3.amazonaws.com/amazon-ecs-cli/ecs-
 sudo chmod +x /usr/local/bin/ecs-cli
 
 # global npm
-sudo npm install -g yarn@1.7.0
+sudo npm i npm@5.6.0 -g
 sudo npm install -g merge-yaml-cli
 sudo npm install -g aws-sdk
 sudo npm install -g babel-cli
 sudo npm install -g api-console-cli
+
+# upgrade yarn
+sudo curl --compressed -o- -L https://yarnpkg.com/install.sh | bash
