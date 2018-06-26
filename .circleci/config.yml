@@ -38,3 +38,5 @@ workflows:
               only:
                 - master
                 - '8.11'
+                - '8.10'
+                - '8.9'
