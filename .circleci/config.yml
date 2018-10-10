@@ -6,25 +6,43 @@ defaults: &defaults
 version: 2
 jobs:
 
+  build:
+    <<: *defaults
+    steps:
+      - setup_remote_docker
+      - checkout
+      - run: docker build .
+
   build_and_update:
     <<: *defaults
     steps:
-      - checkout
       - setup_remote_docker
+      - checkout
       - run:
           name: Build Image
-          command: yarn build
+          command: |
+            TAG=$(echo $CIRCLE_BRANCH | sed "s@/@_@g")
+            docker build -t rhinogram/node-awscli:$TAG .
       - run:
           name: Login to Dockerhub
           command: docker login -u $USERNAME -p $PASSWORD
       - run:
           name: Update Docker Image
-          command: docker push rhinogram/node-awscli
+          command: docker push rhinogram/node-awscli:$TAG
 
 workflows:
   version: 2
 
-  master:
+  general:
+    jobs:
+      - build:
+          filters:
+            branches:
+              ignore:
+                - '8.11'
+                - '8.10'
+
+  update:
     jobs:
       - build_and_update:
           filters:
