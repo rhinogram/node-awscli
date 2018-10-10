@@ -24,11 +24,10 @@ jobs:
             TAG=$(echo $CIRCLE_BRANCH | sed "s@/@_@g")
             docker build -t rhinogram/node-awscli:$TAG .
       - run:
-          name: Login to Dockerhub
-          command: docker login -u $USERNAME -p $PASSWORD
-      - run:
-          name: Update Docker Image
-          command: docker push rhinogram/node-awscli:$TAG
+          name: Login to Dockerhub and Push
+          command: |
+            docker login -u $USERNAME -p $PASSWORD
+            docker push rhinogram/node-awscli:$TAG
 
 workflows:
   version: 2
