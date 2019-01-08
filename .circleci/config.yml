@@ -26,8 +26,14 @@ jobs:
       - run:
           name: Login to Dockerhub and Push
           command: |
+            TAG=$(echo $CIRCLE_BRANCH | sed "s@/@_@g")
             docker login -u $USERNAME -p $PASSWORD
             docker push rhinogram/node-awscli:$TAG
+
+            if [ "$TAG" == "master" ]; then
+              docker tag rhinogram/node-awscli:$TAG rhinogram/node-awscli:latest
+              docker push rhinogram/node-awscli:latest
+            fi
 
 workflows:
   version: 2

@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "installing dependencies..."
-sudo apt-get update 
+sudo apt-get update
 
 # python and awscli
 sudo apt-get install -qq -y python-pip libpython-dev
