@@ -38,6 +38,7 @@ workflows:
           filters:
             branches:
               ignore:
+                - master
                 - '8.11'
                 - '8.10'
 
@@ -47,5 +48,6 @@ workflows:
           filters:
             branches:
               only:
+                - master
                 - '8.11'
                 - '8.10'
