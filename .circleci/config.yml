@@ -1,7 +1,7 @@
 defaults: &defaults
   working_directory: ~/node-awscli
   docker:
-    - image: circleci/node:6.11.2
+    - image: circleci/node:8.11
 
 version: 2
 jobs:

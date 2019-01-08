@@ -1,7 +1,7 @@
 {
   "name": "node-awscli",
   "version": "1.0.0",
-  "description": "Public docker image with Node 8.9, ecs-cli, and aws-cli for CircleCi workspaces",
+  "description": "Public docker image for CircleCi workspaces",
   "author": "Rhinogram, LLC",
   "license": "ISC"
 }
