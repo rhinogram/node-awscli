@@ -12,7 +12,7 @@ sudo pip install -q awscli==1.15.50 --upgrade # lock version
 sudo apt-get install jq
 
 # global npm
-sudo npm install -g yarn@1.7.0
+sudo npm install -g yarn@1.13.0
 sudo npm install -g babel-cli
 
 # modify executable permissions
