@@ -3,10 +3,5 @@
   "version": "1.0.0",
   "description": "Public docker image for CircleCi workspaces",
   "author": "Rhinogram, LLC",
-  "license": "ISC",
-  "probot": {
-    "apps": [
-      "enforce-template-app"
-    ]
-  }
+  "license": "ISC"
 }
