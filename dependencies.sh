@@ -13,7 +13,7 @@ sudo apt-get install jq
 
 # global npm
 sudo npm install -g yarn@1.17.3
-sudo npm install -g babel-cli
+sudo npm install -g @babel/cli
 
 # modify executable permissions
 sudo chmod a+rwx  /usr/local/lib/node_modules/yarn/bin/yarn*
