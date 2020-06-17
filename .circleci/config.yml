@@ -3,7 +3,7 @@ defaults: &defaults
   docker:
     - image: circleci/node:12
 
-version: 3
+version: 2
 jobs:
 
   build:
@@ -36,7 +36,7 @@ jobs:
             fi
 
 workflows:
-  version: 3
+  version: 2
 
   general:
     jobs:
