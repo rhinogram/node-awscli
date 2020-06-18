@@ -1,7 +1,7 @@
 defaults: &defaults
   working_directory: ~/node-awscli
   docker:
-    - image: circleci/node:8.11
+    - image: circleci/node:12
 
 version: 2
 jobs:
@@ -48,6 +48,7 @@ workflows:
                 - '10'
                 - '8.11'
                 - '8.10'
+                - '12'
 
   update:
     jobs:
@@ -59,3 +60,4 @@ workflows:
                 - '10'
                 - '8.11'
                 - '8.10'
+                - '12'
