@@ -1,4 +1,4 @@
-FROM circleci/node:10
+FROM circleci/node:12
 LABEL maintainer="Rhinogram, LLC"
 LABEL description="Basic Docker image with Node and AWS CLI for CircleCi workspaces"
 
