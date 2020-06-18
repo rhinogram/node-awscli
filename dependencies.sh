@@ -6,7 +6,7 @@ sudo apt-get update
 # python and awscli
 sudo apt-get install -qq -y python-pip libpython-dev
 sudo curl -O https://bootstrap.pypa.io/get-pip.py && sudo python get-pip.py
-sudo pip install -q awscli==1.16.180 --upgrade # lock version
+sudo pip install -q awscli==1.18.18 --upgrade # lock version
 
 # jq json parser
 sudo apt-get install jq
